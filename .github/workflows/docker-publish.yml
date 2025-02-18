@@ -8,9 +8,9 @@ on:
   workflow_dispatch:
 
 env:
-  REPO: hlf01/telegram-onedrive
-  NAME: L-ING
-  EMAIL: hlf01@icloud.com
+  REPO: kwiskr/telegramtoondrive
+  NAME: kwiskr
+  EMAIL: kwiskr@gmail.com
   GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
   TAG_NAME: ${{ github.event_name == 'workflow_dispatch' && 'dev' || github.event.release.name }}
   RELEASE_VERSION: ${{ github.event.release.name }}
@@ -23,7 +23,7 @@ run-name: ${{ github.event_name == 'workflow_dispatch' && 'build dev' || github.
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.repository_owner == 'hlf20010508'
+    if: github.repository_owner == 'bxue2139'
     steps:
     - name: Checkout
       uses: actions/checkout@v4
